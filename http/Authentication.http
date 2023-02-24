@@ -1,0 +1,43 @@
+### Register
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstname": "Thuy",
+  "lastname": "Tran",
+  "email": "mr.thuytran@gmail.com",
+  "password": "Pass1234"
+}
+
+
+<> 2023-02-24T192132.200.json
+<> 2023-02-24T185157.200.json
+
+### Authenticate
+POST http://localhost:8080/api/v1/auth/authenticate
+Content-Type: application/json
+
+{
+  "email": "mr.thuytran@gmail.com",
+  "password": "Pass1234"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+<> 2023-02-24T194138.200.json
+<> 2023-02-24T193901.200.json
+<> 2023-02-24T193810.200.json
+<> 2023-02-24T193703.200.json
+<> 2023-02-24T193457.200.json
+<> 2023-02-24T193421.200.json
+<> 2023-02-24T193346.200.json
+<> 2023-02-24T193023.200.json
+<> 2023-02-24T191510.200.json
+<> 2023-02-24T191416.200.json
+
+### demo
+GET http://localhost:8080/api/v1/demo
+Authorization: Bearer {{auth_token}}
+
+<> 2023-02-24T194139.200.txt
+<> 2023-02-24T193815.200.txt
+<> 2023-02-24T193735.200.txt
