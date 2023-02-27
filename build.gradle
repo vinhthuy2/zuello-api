@@ -38,6 +38,10 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 }
 
+bootWar {
+    archiveFileName = 'SpringBootZuelloApi.war'
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
