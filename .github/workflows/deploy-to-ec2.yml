@@ -49,7 +49,7 @@ jobs:
         arguments: bootWar
         
     - name: Upload Artifact to s3
-      working-directory: target
+      working-directory: build/libs
       run: aws s3 cp *.war s3://${{ env.S3BUCKET }}/
         
   deploy-to-ec2:
