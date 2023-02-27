@@ -9,7 +9,7 @@ name: Java CI with Gradle
 
 
 env:
-  applicationfolder: zuello-spring-boot-api
+  applicationfolder: zuello-api
   AWS_REGION: ap-southeast-1
   S3BUCKET: zuello-deployment-bucket
   APP_NAME: zuello-api-deploy
