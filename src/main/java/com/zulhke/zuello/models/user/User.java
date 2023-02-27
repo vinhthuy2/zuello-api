@@ -1,5 +1,6 @@
 package com.zulhke.zuello.models.user;
 
+import com.mongodb.lang.NonNull;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -19,11 +20,16 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     private String id;
+    @NonNull
     private String firstName;
+    @NonNull
     private String lastName;
     @Indexed
+    @NonNull
     private String email;
+    @NonNull
     private String password;
+    @NonNull
     private Role role;
 
     @Override

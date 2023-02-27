@@ -43,4 +43,4 @@ Authorization: Bearer {{auth_token}}
 <> 2023-02-24T193735.200.txt
 ###
 GET http://localhost:8080/api/v1/demo/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtci50aHV5dHJhbkBnbWFpbC5jb20iLCJpYXQiOjE2NzcyNDI0OTgsImV4cCI6MTY3NzI0MzkzOH0.d44MTF4ACOEE62lK-dtuPcJ0zEDL2diRmgd29R_dfIk
+Authorization: Bearer {{auth_token}}

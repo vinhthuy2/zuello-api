@@ -53,7 +53,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
   @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
   public ResponseEntity<Object> handleAllUncaughtException(Exception exception, WebRequest request) {
     log.error("Unknown error occurred", exception);
-    return buildErrorResponse(exception, "Unknown error occurred", HttpStatus.INTERNAL_SERVER_ERROR, request);
+    return buildErrorResponse(exception, exception.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, request);
   }
 
   private ResponseEntity<Object> buildErrorResponse(Exception exception,
@@ -80,15 +80,5 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     return Objects.nonNull(value)
         && value.length > 0
         && value[0].contentEquals("true");
-  }
-
-  public ResponseEntity<Object> handleExceptionInternal(
-      Exception ex,
-      Object body,
-      HttpHeaders headers,
-      HttpStatus status,
-      WebRequest request) {
-
-    return buildErrorResponse(ex, status, request);
   }
 }

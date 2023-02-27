@@ -20,10 +20,7 @@ public class ErrorResponse {
   private String stackTrace;
   private List<ValidationError> errors;
 
-  @Getter
-    @Setter
-    @RequiredArgsConstructor
-    private record ValidationError(String field, String message) {
+  private record ValidationError(String field, String message) {
   }
 
   public void addValidationError(String field, String message) {
