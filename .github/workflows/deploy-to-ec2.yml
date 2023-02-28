@@ -11,7 +11,7 @@ name: Java CI with Gradle
 env:
   applicationfolder: zuello-api
   AWS_REGION: ap-southeast-1
-  S3BUCKET: zuello-deployment-bucket
+  S3BUCKET: test-role-webappdeploymentbucket-1tswswm5x94a
   APP_NAME: zuello-api-deploy
   AWS_DEPLOY_GROUP: zuello-deployment-group
 
