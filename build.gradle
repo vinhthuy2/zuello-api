@@ -42,6 +42,10 @@ bootWar {
     archiveFileName = 'SpringBootZuelloApi.war'
 }
 
+bootJar {
+    archiveFileName = 'Zuello.jar'
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
